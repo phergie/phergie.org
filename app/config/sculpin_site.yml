@@ -1,0 +1,10 @@
+# The contents of this file are parsed and made available as
+# via `site.*`. So for example, {{ site.title }} can be used
+# in a template to get the contents of the `title` key.
+title: Phergie - A PHP IRC Bot
+subtitle: Phergie is an open source IRC bot written in PHP 5
+google_analytics_tracking_id: GA_CODE
+
+# Insert your disqus shortname
+#disqus:
+#    shortname:
