@@ -1,0 +1,23 @@
+---
+title: 'Known Issue in Phergie 2.0.3'
+date: '2010-08-08 15:31:11'
+layout: post
+slug: known-issue-in-phergie-203
+categories:
+    - Announcements
+tags: {  }
+---
+
+There's a known issue with the Phergie 2.0.3 release that prevents some events from being processed. This is due to three circumstances:
+<ol>
+	<li>Human error - In an effort to push the release out more quickly to replace the existing Phergie 1.x installation on Freenode with a 2.x instance, this issue was simply overlooked and somehow didn't present itself distinctly during rudimentary testing. This was a big mistake on our part and we apologize to any affected users.</li>
+	<li>Lack of sufficient unit testing - This is something we're working on. However, the problem was actually with two Phergie core components that had full code coverage. This shows that, while code coverage can be useful to expose blocks of code that are definitely not covered by any tests, don't assume code is fully covered simply because code coverage says it is.</li>
+	<li>Unexpected behavior - What appears to be <a title="Bug #52560 :: FilterIterator errantly returns null for first element" href="https://bugs.php.net/bug.php?id=52560">a bug</a> in PHP itself, specifically in the <a title="PHP: FilterIterator - Manual" href="http://us2.php.net/filteriterator">FilterIterator</a> class, contributed to the problem. Oddly, this class also <a title="LCOV - PHP Code Coverage - spl/spl_iterators.c" href="http://gcov.php.net/PHP_5_3/lcov_html/spl/spl_iterators.c.gcov.php">appears to have full code coverage</a>, affirming the related point above.</li>
+</ol>
+For those users affected, there are two options for dealing with this issue pending the next release.
+<ol>
+	<li>Downgrade to Phergie 2.0.2 - Not ideal, but that release was relatively stable.</li>
+	<li>Patch 2.0.3 - The <a title="Commit 84fb294f32a8ddf2fbbf2a5a9835c88149a85a4b to elazar&#039;s phergie - GitHub" href="https://github.com/elazar/phergie/commit/84fb294f32a8ddf2fbbf2a5a9835c88149a85a4b">patch</a> is in the git repository if you'd like to apply the patch to fix the issue yourself.</li>
+	<li>Run Phergie bleeding edge - This is done by cloning the git repository, placing your settings file on the same level as the Phergie directory, and running the phergie.php script there.</li>
+</ol>
+We're hoping to make another release within the next couple of weeks.

@@ -1,0 +1,47 @@
+---
+title: 'Package releases for September 2013'
+date: '2013-10-05 13:38:05'
+layout: post
+slug: package-releases-for-september-2013
+categories:
+    - Releases
+tags: {  }
+---
+
+The foundational packages for Phergie 3 have firmed up and we expect to have an initial development release of a full-featured bot implementation in the coming months. Stay tuned for further developments.
+<h3>phergie-irc-parser 1.3.0</h3>
+<a title="phergie/phergie-irc-parser" href="https://github.com/phergie/phergie-irc-parser">Github</a>, <a title="phergie/phergie-irc-parser - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-parser">Packagist</a>
+<ul>
+	<li>Updated nick parsing to conform to RFC 2812 (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+	<li>Fixed crash on encountering malformed CTCP messages (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+</ul>
+<h3>phergie-irc-generator 1.2.0</h3>
+<a title="phergie/phergie-irc-generator" href="https://github.com/phergie/phergie-irc-generator">Github</a>, <a title="phergie/phergie-irc-generator - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-generator">Packagist</a>
+<ul>
+	<li>Added support for CTCP ACTION requests and responses (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+</ul>
+<h3>phergie-irc-client-react 1.0.0</h3>
+<a title="phergie/phergie-irc-client-react" href="https://github.com/phergie/phergie-irc-client-react">Github</a>, <a title="phergie/phergie-irc-client-react - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-client-react">Packagist</a>
+<ul>
+	<li>Updated WriteStream to support CTCP ACTION requests and responses (<a title="stil" href="https://github.com/stil">stil</a>)</li>
+	<li>Expanded unit tests to achieve 100% coverage (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+	<li>Improved documentation (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+	<li>Refactored connection and event handling (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+	<li>Added support for one-time and recurring timed events (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+	<li>Improved connection error handling (<a title="elazar (Matthew Turland)" href="http://github.com/elazar">elazar</a>)</li>
+</ul>
+<h3>Other Highlights</h3>
+<ul>
+	<li>PHP 5.5 was added to all project Travis CI configurations</li>
+</ul>
+<h3>Acknowledgements</h3>
+We love our contributors! Many thanks to those without whom these releases would not have been possible.
+<ul>
+	<li><a title="stil" href="https://github.com/stil">stil</a> has frequently submitted issue reports, pull requests, and inspiration for new features</li>
+	<li><a title="igorw" href="https://github.com/igorw">igorw</a> has kept an eye on our use of <a title="React" href="http://reactphp.org/">React</a> libraries and guided us towards optimal approaches</li>
+</ul>
+<h3>Roadmap</h3>
+<ul>
+	<li><a title="phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react">phergie-irc-bot-react</a> will build on <a title="phergie/phergie-irc-client-react" href="https://github.com/phergie/phergie-irc-client-react">phergie-irc-client-react</a> to provide infrastructure for configuration and plugins</li>
+	<li>Once <a title="phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react">phergie-irc-bot-react</a> is stable, individual plugins will be ported into their own repos and will be installable via <a title="Composer" href="http://getcomposer.org">Composer</a></li>
+</ul>

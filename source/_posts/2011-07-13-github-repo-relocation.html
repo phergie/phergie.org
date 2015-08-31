@@ -1,0 +1,22 @@
+---
+title: 'GitHub Repo Relocation'
+date: '2011-07-13 05:16:07'
+layout: post
+slug: github-repo-relocation
+categories:
+    - Announcements
+tags: {  }
+---
+
+Until now, the main <a title="GitHub" href="https://github.com/">GitHub</a> repository for the Phergie project had been kept under a single user account at <a title="elazar/phergie - GitHub" href="https://github.com/phergie/phergie">http://github.com/elazar/phergie</a>. It has been transferred to an organization on GitHub. The new repo address is <a title="phergie/phergie - GitHub" href="https://github.com/phergie/phergie">http://github.com/phergie/phergie</a>.
+
+There are a few reasons for this transfer:
+<ul>
+	<li>A new core team will be given merge rights to streamline acceptance of contributions where it was previously limited by the availability of a single developer.</li>
+	<li>Eventually, plugins and other sub-projects can be split off into their own repositories within the same organization to be developed independently from the main project and to allow more fine-grained grants of merge rights.</li>
+</ul>
+Any pull requests and issues should be directed to the transferred repository. Any existing clones of the original repository will need to have their upstream remotes updated to point to the new location. This can be done using the following command:
+
+<code>git remote set-url upstream git://github.com/phergie/phergie.git</code>
+
+Any questions about this change can be directed to the #phergie IRC channel on Freenode or in a comment on this post.

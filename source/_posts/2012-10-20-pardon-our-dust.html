@@ -1,0 +1,24 @@
+---
+title: 'Pardon Our Dust'
+date: '2012-10-20 17:19:33'
+layout: post
+slug: pardon-our-dust
+categories:
+    - Announcements
+tags: {  }
+---
+
+This project has sadly not received as much attention over the last year as in past years. We were hoping to get into a more regular release cycle, but it's been more than a year since the last release. We are, however, hoping to get 2.2.0 out within the year.
+
+A few maintenance releases may follow 2.2.0, but not long after that the 2.x branch of Phergie will reach <a title="End-of-life (product) - Wikipedia" href="http://en.wikipedia.org/wiki/End-of-life_(product)">EOL</a>. Following the 2.2.0 release, efforts will be focused on Phergie 3, which will entail a number of changes we're very excited about.
+<ul>
+	<li><strong>We will be splitting the project into multiple sub-projects</strong>, following suit with projects like <a title="sebastianbergmann/phpunit" href="https://github.com/sebastianbergmann/phpunit/">PHPUnit</a> and <a title="zendframework (Zend Framework)" href="https://github.com/zendframework">Zend Framework</a>. Sub-projects will have their own repositories under the umbrella of the <a title="phergie (Phergie Team) - GitHub" href="https://github.com/phergie">Phergie GitHub organization</a>.</li>
+	<li><strong>We will move to requiring PHP 5.3 or higher for most or all sub-projects</strong>. All new code will use <a title="PHP: Namespaces - Manual" href="http://www.php.net/manual/en/language.namespaces.php">PHP namespaces</a>.</li>
+	<li><strong>We will make sub-projects reusable by other projects</strong>. To that end, we will be supporting use of <a title="Composer" href="http://getcomposer.org/">Composer</a> and publishing sub-projects on <a title="Packagist" href="https://packagist.org/">Packagist</a>.</li>
+	<li><strong>We will integrate existing projects where possible</strong>. In particular, we're looking at using <a title="React" href="http://nodephp.org/">React</a> for the daemon portion of Phergie 3.</li>
+	<li><strong>We will maintain continuous integration</strong> using <a title="Travis CI - Hosted Continuous Integration for the Open Source Community" href="https://travis-ci.org/">Travis CI</a>.</li>
+	<li><strong>We will implement a low-friction process for contributing to documentation</strong> likely using either GitHub's pages or wiki features.</li>
+</ul>
+We're happy to announce the first Phergie sub-project, <strong>phergie-irc-parser</strong>. This sub-project provides a fairly fast and easy-to-use PHP-based parser for streams of data conforming to the IRC protocol. You can find the source code for it on <a title="phergie/phergie-irc-parser" href="https://github.com/phergie/phergie-irc-parser">GitHub</a> and it is on <a title="phergie/phergie-irc-parser - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-parser">Packagist</a> as well.
+
+We hope to have more announcements soon. Stay tuned!
