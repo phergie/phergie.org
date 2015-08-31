@@ -8,7 +8,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
-    <link rel="stylesheet" href="http://phergie.org/wp-content/themes/blass2-child/style.css" type="text/css" media="screen" />
+    {#<link rel="stylesheet" href="http://phergie.org/wp-content/themes/blass2/style.css" type="text/css" media="screen" />#}
+    <link rel="stylesheet" href="{{ theme_path('css/style.css') }}" type="text/css" media="screen" />
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed" />
 </head>
 
@@ -32,7 +33,11 @@
             A PHP IRC Bot
         </p>
 
-        <h1><a href="http://phergie.org"><img src="http://phergie.org/wp-content/themes/blass2-child/images/logo.jpg" alt="Phergie - logo by Jess Planck http://funroe.net" /></a></h1>
+        <h1>
+            <a href="/">
+                <img src="{{ theme_path("assets/logo.jpg") }}" alt="Phergie - logo by Jess Planck http://funroe.net" />
+            </a>
+        </h1>
 
 
 
@@ -68,7 +73,13 @@
                 <a href="http://phergie.org/2013/03/05/phergie-irc-parser-1-1-0-released/">phergie-irc-parser 1.1.0 released</a>
             </li>
         </ul>
-        <br />			<div class="textwidget"><p><a href="http://phpwomen.org" title="PHPWomen"><img src="/wp-content/uploads/phpwomen-1-keyline.gif" alt="PHPWomen: Strength in Unity"></a></p>
+        <br />
+        <div class="textwidget">
+            <p>
+                <a href="http://phpwomen.org" title="PHPWomen">
+                    <img src="{{ theme_path('assets/phpwomen.gif') }}" alt="PHPWomen: Strength in Unity">
+                </a>
+            </p>
             <p>Proud member of the<br />
                 <a href="http://phpwomen.org/os-project-opportunities/" title="OS Project Opportunities &raquo; PHPWomen">PHPWomen Partnership Program</a></p></div>
         <br />

@@ -1,0 +1,451 @@
+/*
+
+Theme Name: Blass2
+Theme URI: http://1000ff.de/wordpress-theme-blass-english-version/
+Description: Elegant and simple. Blass2 is a CSS-only theme, has a widgetized sidebar, support for gravatars, and works nicely with WordPress 2.5+. Brought to you by <a href="http://1000ff.de/">1000ff</a>.
+Version: 1.6.2
+Tags: fixed width, two columns, widget ready, widgets, right sidebar, simple, white, clean, valid CSS, valid XHTML
+Author: 1000ff
+Author URI: http://1000ff.de/
+
+*/
+
+/* body
+--------------------------------------------------*/
+body {
+font:62.5%/1.6em "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
+color:#333;
+margin:0;
+}
+
+* {
+margin:0;
+padding:0;
+}
+
+code {
+font:120% "Courier New", "Lucida Console", Arial;
+}
+
+img {
+border:0;
+}
+
+/* header
+--------------------------------------------------*/
+#header {
+border-top:30px solid #fff;
+}
+
+#header .description {
+float:right;
+color:#333;
+margin:45px 0 0;
+}
+
+#header h1 {
+border-bottom:3px solid #EFF8FB;
+/* margin:15px 0 0; */
+margin:0;
+/* padding:25px 25px 40px 0; */
+padding:25px 25px 25px 0;
+}
+
+#wrapper {
+width:760px;
+margin:0 auto;
+}
+
+/* header h1 (blogtitle)
+--------------------------------------------------*/
+#header h1 {
+font-family:"Lucida Grande", "Lucida Sans Unicode", "Times New Roman", Times, serif;
+font-size:3.8em;
+font-weight:400;
+color:#333;
+letter-spacing:-1px;
+/* margin:20px 0; */
+}
+
+#header h1 a {
+text-decoration:none;
+color:#333;
+}
+
+/* navigation
+--------------------------------------------------*/
+#nav {
+border-bottom:3px solid #EFF8FB;
+height:25px;
+margin:0;
+padding:15px 0;
+}
+
+#nav li {
+float:left;
+list-style:none;
+padding:0 4px 0 0;
+}
+
+#nav li a {
+color:#999;
+background:#fff;
+font:1.6em "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+font-weight:400;
+text-decoration:none;
+display:block;
+margin:1px 2px 0 0;
+padding:5px;
+}
+
+#nav li a:hover {
+background-color:#EFF8FB;
+color:#000;
+text-decoration:none;
+}
+
+#nav li a.active {
+background-color:#eee;
+color:#444;
+text-decoration:none;
+}
+
+.clear {
+clear:both;
+}
+
+/* content
+--------------------------------------------------*/
+#content {
+margin:0 250px 0 0 !important;
+padding:10px 20px 0px 0;
+}
+
+#content2 {
+margin:0 !important;
+padding:10px 0 0px;
+}
+
+#content p,#content2 p {
+line-height:25px;
+font-size:120%;
+word-spacing:1px;
+margin:25px 0;
+}
+
+#content a,#content2 a {
+text-decoration:none;
+color:#999;
+}
+
+#content a:hover,#content2 a:hover {
+background-color:#EFF8FB;
+color:#000;
+}
+
+#content h2,#content2 h2 {
+font-family:"Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+font-size:2.8em;
+font-weight:400;
+color:#999;
+border-bottom:1px solid #EFF8FB;
+line-height:30px;
+margin:15px 0;
+padding:5px 0;
+}
+
+#content h2 a,#content2 h2 a {
+text-decoration:none;
+border:none;
+}
+
+#content h1 {
+font:3em "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+color:#222;
+margin:10px 0;
+}
+
+#content h3 {
+font:2em "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+color:#222;
+margin:10px 0;
+}
+
+#content h4 {
+font:1.8em "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+color:#222;
+margin:10px 0;
+}
+
+#content h5 {
+font:1.6em "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+color:#222;
+margin:10px 0;
+}
+
+#content2 h3 {
+font:160% "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+color:#222;
+margin:10px 0;
+}
+
+#content ul,ol {
+font-size:120%;
+margin:10px 10px 10px 25px;
+}
+
+#content2 ul,ol {
+margin:10px 10px 10px 25px;
+}
+
+/* blockquote + links
+--------------------------------------------------*/
+
+blockquote {
+background:#EFF8FB;
+border:1px solid #ccc;
+margin:10px 0;
+padding:5px 15px;
+}
+
+a:hover {
+color:#000;
+text-decoration:none;
+background-color:#EFF8FB;
+}
+
+a.more {
+display:block;
+text-align:right;
+color:#2F460D;
+text-decoration:none;
+margin:10px 0 0;
+}
+
+a.more:hover {
+text-decoration:none;
+}
+
+/* metadata under post
+--------------------------------------------------*/
+.post {
+margin:0 0 50px 0;
+text-align:justify;
+}
+
+.post img {
+background:#ccc;
+border:5px solid #eee;
+padding:1px;
+}
+
+.post .info {
+border-bottom:1px solid #ccc;
+border-top:1px solid #ccc;
+background-color:#EFF8FB;
+font-size:1em;
+color:#333;
+padding:2px 3px 3px 8px;
+margin: 25px 0;
+}
+
+.date {
+margin: 0 0 15px 0;
+}
+
+.post small {
+margin-top:25px;
+}
+
+/* metadata sidebar ('about this post')
+--------------------------------------------------*/
+p.news {
+background:#EFF8FB;
+color:#333;
+font-size:120%;
+border-bottom:1px solid #ccc;
+border-top:1px solid #ccc;
+margin:10px 0 28px;
+padding:10px;
+}
+
+/* sidebar
+--------------------------------------------------*/
+#sidebar {
+width:220px;
+float:right;
+padding:28px 10px 30px;
+height:100%;
+}
+
+#sidebar h2 {
+letter-spacing:1px;
+font-size:1.6em;
+color:#333;
+padding:0 0 3px;
+}
+
+#sidebar ul {
+list-style:none;
+font-size:120%;
+margin:0 0 23px;
+}
+
+#sidebar li {
+border-bottom:1px solid #EFF8FB;
+list-style:none;
+padding:3px;
+}
+
+#sidebar li a:hover {
+color:#000;
+background-color:#EFF8FB;
+}
+
+#sidebar input {
+width:102px;
+background:#fff;
+color:#444;
+border:1px solid #eee;
+font:11px "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+padding:3px;
+}
+
+#sidebar input:focus {
+background:#fff;
+border:1px solid #eee;
+}
+
+/* some input
+--------------------------------------------------*/
+input {
+border:1px solid #CCC;
+font:11px "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+padding:3px;
+}
+
+input:hover {
+border:1px solid #262626;
+}
+
+input:focus {
+border:1px solid #262626;
+color:#333;
+}
+
+/* comments
+--------------------------------------------------*/
+#comments {
+font-size:0.9em;
+}
+
+#commentlist li {
+margin-bottom:1.5em;
+padding-bottom:1em;
+}
+
+#commentform {
+background:#fff;
+width:350px;
+text-align:left;
+margin:0 0 15px 0;
+}
+
+#commentform textarea {
+background:#f8f7f6;
+border:1px solid #d6d3d3;
+width:480px;
+font: 13px "Lucida Grande", "Lucida Sans Unicode", Trebuchet MS;
+}
+
+#commentform #email,#commentform #author,#commentform #url {
+font-size:1.1em;
+background:#f8f7f6;
+border:1px solid #d6d3d3;
+width:350px;
+}
+
+#commentform input {
+margin-bottom:3px;
+}
+
+#gravatar {
+align:right;
+}
+
+/* wp stuff
+--------------------------------------------------*/
+
+.aligncenter {
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.alignleft {
+float:left;
+}
+
+.alignright {
+float:right;
+}
+
+.navigation {
+text-align:center;
+font-size:120%;
+}
+
+.wp-caption {
+border:1px solid #ddd;
+text-align:center;
+background-color:#f3f3f3;
+padding:4px 0 0 0;
+-moz-border-radius:3px;
+-khtml-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+margin:10px;
+}
+
+.wp-caption img {
+border:0 none;
+margin:0;
+padding:0;
+}
+
+
+.wp-caption-dd {
+font-size:11px;
+line-height:17px;
+margin:0;
+padding:0 4px 5px;
+}
+
+#header h1 a:hover,#footer a:hover {
+text-decoration:none;
+color:#333;
+background:#EFF8FB;
+}
+
+#content li,#content2 li {
+border-bottom:1px solid #EFF8FB;
+padding:10px;
+}
+
+a,#sidebar li a,#footer a {
+color:#999;
+text-decoration:none;
+}
+
+/* footer
+--------------------------------------------------*/
+#footer {
+color:#333;
+margin:0;
+padding:20px 0;
+}
+
+.post { text-align: left; }
+#content p { margin: 10px 0; }
+#content h3 { padding-top: 20px; }
+#content li { border: 0; padding: 5px; }
