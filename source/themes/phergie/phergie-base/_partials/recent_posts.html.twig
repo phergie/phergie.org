@@ -1,0 +1,17 @@
+---
+layout: default
+title: Home
+generator: pagination
+pagination:
+max_per_page: 3
+use:
+- posts
+---
+<h2>Recent Posts</h2>
+<ul>
+    {% for post in page.pagination.items %}
+        <li>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
