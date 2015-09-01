@@ -28,4 +28,4 @@ Maybe you've got some new content you'd like to see on the page.  What happens a
 
 @Svpernova09 handles deployments.
 
-If you don't see your change on the live site and you see your PR merged into master: Please ping ```joepferguson``` in #memtech on Freenode
+If you don't see your change on the live site and you see your PR merged into master: Please ping ```joepferguson``` in #phergie on Freenode
