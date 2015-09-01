@@ -1,5 +1,10 @@
 ---
 layout: default
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
 ---
 
 {% block content %}

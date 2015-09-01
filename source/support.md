@@ -1,7 +1,11 @@
 ---
 layout: default
 title: Support
-
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
 ---
 
 ## Support

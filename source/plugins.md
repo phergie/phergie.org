@@ -1,7 +1,11 @@
 ---
 layout: default
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
 ---
-
 ## Available Plugins
 
 * **[AltNick](https://github.com/PSchwisow/phergie-irc-plugin-react-altnick)** - automatically switches to alternate nicks when primary is not available

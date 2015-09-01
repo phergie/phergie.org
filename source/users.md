@@ -1,7 +1,11 @@
 ---
 layout: default
 title: Users
-
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
 ---
 ## Installation
 
