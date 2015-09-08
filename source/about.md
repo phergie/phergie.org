@@ -13,6 +13,12 @@ use:
 
 Phergie is an open source IRC bot written in PHP 5. She was originally written to replace the Ai bot in the #phpc PHP Community channel on the Freenode network. The intention behind her development was to provide a bot with an open modern codebase to which patrons of the channel could contribute. Her popularity has grown over time and she now runs in a number of channels on Freenode.
 
+Matthew Turland is the original author and project lead. Late August of 2015 Matthew reached out to test the waters on the idea of passing the leadership torch of the Phergie project. Matthew Trask And Joe Ferguson took co-leadership of the project shortly after while Matthew Turland has stayed on in an advisory role. 
+
+### See Phergie in action
+
+You can find Phergie on the Freenode IRC network. Some of the channels you will find her: #phergie, #phpmentoring, and #phpc. If you are a channel owner and would like to request Phergie join your channel please come visit us in #phergie on Freenode.
+
 ### Statement of Diversity
 
 The Phergie project welcomes and encourages participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.
