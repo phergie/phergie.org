@@ -6,6 +6,21 @@ pagination:
 use:
     - posts
 ---
+* [Developing Plugins](#developing-plugins)
+  * [Why Plugins?](#why-plugins)
+  * [What You Need](#what-you-need)
+  * [Plugins Defined](#plugins-defined)
+  * [Supported Events](#supported-events)
+  * [Responding to Events](#responding-to-events)
+  * [Asynchronous and Timed Events](#asynchronous-and-timed-events)
+  * [Custom Events](#custom-events)
+  * [Logging](#logging)
+  * [Installation](#installation)
+* [Bot Customization](#bot-customization)
+  * [Dependencies](#dependencies)
+  * [Plugin Processors](#plugin-processors)
+* [Core Development](#core-development)
+  * [Running Tests](#running-tests)
 
 ## Developing Plugins
 
@@ -28,6 +43,8 @@ Alternatively, create a directory containing a `composer.json` file with the con
 ```
 
 As you're reviewing this page, the [API documentation](http://phergie.github.io/api/namespaces/Phergie.Irc.html) may come in handy.
+
+[top](#)
 
 ## Plugins Defined
 
@@ -62,6 +79,8 @@ class ExamplePlugin implements PluginInterface
 In the above example, `'irc.received.privmsg'` is an event name and
 `'onPrivmsg'` is the name of a method in the `ExamplePlugin` class to handle
 that event.
+
+[top](#)
 
 ### Supported Events
 
@@ -98,6 +117,8 @@ original event and implements
 [`EventQueueInterface`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/EventQueueInterface.php), a subinterface of [`GeneratorInterface`](https://github.com/phergie/phergie-irc-generator/blob/master/src/GeneratorInterface.php) where most of its methods are found.
 
 One exception to this is the `'irc.sending.all'` event, which takes only the `$queue` parameter.
+
+[top](#)
 
 ### Responding to Events
 
@@ -137,6 +158,8 @@ To get the channel in which the original event occurred, `onJoin()` invokes `$ev
 `'irc.received.join'` events always occur in channels. To address a user who joins a channel, `onJoin()` needs that user's nickname, which it obtains using `$event->getNick()`. This method always returns the nickname of the event's originating user, as opposed to `$event->getSource()` which returns either that nickname or the name of a channel depending on the context of the event.
 
 Finally, `onJoin()` invokes `$queue->ircPrivmsg()` to send the constructed message back to the channel.
+
+[top](#)
 
 ### Asynchronous and Timed Events
 
@@ -217,6 +240,8 @@ class Plugin extends AbstractPlugin implements LoopAwareInterface
 }
 ```
 
+[top](#)
+
 ### Custom Events
 
 In addition to the core supported events that plugins can send and receive, they can also communicate with each other by sending and receiving custom events. To do this, they must implement [`EventEmitterAwareInterface`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/EventEmitterAwareInterface.php). Though this is relatively trivial to do, as the interface only contains a single `setEventEmitter()` method, a shortcut to doing so is to extend [`AbstractPlugin`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/AbstractPlugin.php), which provides an implementation of the interface.
@@ -231,15 +256,21 @@ Event names are specified as strings. They are conventionally namespaced to avoi
 
 `$parameters` is an array of parameter values received by event handler methods of subscribed plugins.
 
+[top](#)
+
 ### Logging
 
 Plugins can gain access to the same [logger instance used by core logic](Usage#logging) by implementing [`LoggerAwareInterface`](https://github.com/php-fig/log/blob/master/Psr/Log/LoggerAwareInterface.php). Though this is relatively trivial to do, as the interface only contains a single `setLogger()` method, a shortcut to doing so is to extend [`AbstractPlugin`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/AbstractPlugin.php), which provides an implementation of the interface.
 
 Once obtained via `setLogger()`, the logger object can be used to log whatever events may be relevant to monitoring or debugging the plugin. In particular, one noteworthy shortcoming of Phergie's use of event callbacks is that there's no way to accurately attribute events sent by plugins in log messages (for debugging purposes) that isn't extremely hacky. As such, logging a message when a plugin sends an event is an advisable practice.
 
+[top](#)
+
 ### Installation
 
 Plugins are conventionally installed [[using composer|Usage#plugins]]. To support this, a [`composer.json` file](https://getcomposer.org/doc/04-schema.md) should be included with the plugin source code that provides information about the plugin and any [dependencies](https://getcomposer.org/doc/04-schema.md#package-links) it has on other plugins or libraries. See the `composer.json` files included with [[existing plugins|Plugins]] for examples.
+
+[top](#)
 
 ## Bot Customization
 
@@ -269,6 +300,8 @@ return array(
 );
 ```
 
+[top](#)
+
 ### Plugin Processors
 
 Plugins sometimes require some common form of dependency injection or other modification after they're loaded. This is handled by plugin processors, which can be set via the `'pluginProcessors'` configuration key as an array of objects implementing [`PluginProcessorInterface`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/PluginProcessor/PluginProcessorInterface.php). If no value is set, by default, the bot will use these plugin processors:
@@ -278,6 +311,8 @@ Plugins sometimes require some common form of dependency injection or other modi
 * [`ClientInjector`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/PluginProcessor/ClientInjector.php) injects the plugin with the [[bot's client|Development#dependencies]] if the plugin implements [`ClientAwareInterface`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/ClientAwareInterface.php) for contexts in which the client is not being used solely as an event emitter.
 * [`LoggerInjector`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/PluginProcessor/LoggerInjector.php) injects the plugin with the same [[logger used by the bot|Usage#logging]] if the plugin implements [`LoggerAwareInterface`](https://github.com/php-fig/log/blob/master/Psr/Log/LoggerAwareInterface.php).
 * [`LoopInjector`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/PluginProcessor/LoopInjector.php) injects the plugin with the [event loop](https://github.com/reactphp/event-loop#eventloop-component) used by the bot's client if the client implements [`LoopAccessorInterface`](https://github.com/phergie/phergie-irc-client-react/blob/master/src/LoopAccessorInterface.php) and the plugin implements [`LoopAwareInterface`](https://github.com/phergie/phergie-irc-client-react/blob/master/src/LoopAwareInterface.php). If so, the plugin can use the event loop to execute stream and timed operations.
+
+[top](#)
 
 ## Core Development
 
@@ -292,3 +327,5 @@ php composer.phar require phpunit/phpunit
 cd tests
 ../vendor/bin/phpunit
 ```
+
+[top](#)
