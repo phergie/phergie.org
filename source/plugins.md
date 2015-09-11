@@ -12,6 +12,7 @@ use:
 * **[Audioscrobbler](https://github.com/chrismou/phergie-irc-plugin-react-audioscrobbler)** - returns the current or last played song for a user on last.fm or libre.fm
 * **[AutoJoin](https://github.com/phergie/phergie-irc-plugin-react-autojoin)** - automatically joins channels when connecting to servers
 * **[AutoRejoin](https://github.com/enebe-nb/phergie-irc-plugin-react-autorejoin)** - automatically re-joins channels on PART or KICK
+* **[Bigstock](https://github.com/shutterstock/phergie-irc-plugin-react-bigstock)** - searches Bigstock API for an image that matches the query string
 * **[Command](https://github.com/phergie/phergie-irc-plugin-react-command)** - parses custom commands within IRC messages and emits them as events for other plugins to consume
 * **[CommandAlias](https://github.com/phergie/phergie-irc-plugin-react-commandalias)** - enables use of custom aliases for existing bot commands
 * **[CommandHelp](https://github.com/phergie/phergie-irc-plugin-react-commandhelp)** - provides usage information for available bot commands to users
