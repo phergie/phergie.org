@@ -12,6 +12,7 @@ use:
 * **[Audioscrobbler](https://github.com/chrismou/phergie-irc-plugin-react-audioscrobbler)** - returns the current or last played song for a user on last.fm or libre.fm
 * **[AutoJoin](https://github.com/phergie/phergie-irc-plugin-react-autojoin)** - automatically joins channels when connecting to servers
 * **[AutoRejoin](https://github.com/enebe-nb/phergie-irc-plugin-react-autorejoin)** - automatically re-joins channels on PART or KICK
+* **[BOFH](https://github.com/phergie/phergie-irc-plugin-react-bofh)** - pulls excuses from bastard operator from hell
 * **[Bigstock](https://github.com/shutterstock/phergie-irc-plugin-react-bigstock)** - searches Bigstock API for an image that matches the query string
 * **[Command](https://github.com/phergie/phergie-irc-plugin-react-command)** - parses custom commands within IRC messages and emits them as events for other plugins to consume
 * **[CommandAlias](https://github.com/phergie/phergie-irc-plugin-react-commandalias)** - enables use of custom aliases for existing bot commands
@@ -126,7 +127,7 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 
 | Plugin  | Description | Suggested By | Claimed By |
 | ------- | ----------- | ------------ | ---------- |
-| BastardOperatorFromHell | Fetches a message from [this URL](http://pages.cs.wisc.edu/~ballard/bofh/bofhserver.pl) on command using the [Http](github.com/WyriHaximus/PhergieHttp) and [Command](github.com/phergie/phergie-irc-plugin-react-command) plugins | @elazar | -- |
+| BastardOperatorFromHell | Fetches a message from [this URL](http://pages.cs.wisc.edu/~ballard/bofh/bofhserver.pl) on command using the [Http](github.com/WyriHaximus/PhergieHttp) and [Command](github.com/phergie/phergie-irc-plugin-react-command) plugins | @elazar | @svpernova09 |
 | GitHub Issue Integration | OH in #slimphp: "what we need is hubot so I can type #17 and get that issue url from here" | @PSchwisow | -- |
 | EventMonitor | Monitors what events are emitted, what channels they originate from, and ideally what plugins are invoked as a result, to get a sense of how the bot is being used | @elazar | -- |
 | TableFlip | Output "(╯°□°）╯︵ ɹǝsodɯoɔ" where the phrase at the end is the upside-down version of a parameterized phrase | @elazar | @elstamey |
