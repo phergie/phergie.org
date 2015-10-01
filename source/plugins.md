@@ -128,6 +128,7 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 | Plugin  | Description | Suggested By | Claimed By |
 | ------- | ----------- | ------------ | ---------- |
 | BastardOperatorFromHell | Fetches a message from [this URL](http://pages.cs.wisc.edu/~ballard/bofh/bofhserver.pl) on command using the [Http](github.com/WyriHaximus/PhergieHttp) and [Command](github.com/phergie/phergie-irc-plugin-react-command) plugins | @elazar | @svpernova09 |
+| CFP | Output list of current calls for papers from joind.in API | @miss_jwo | @elstamey |
 | GitHub Issue Integration | OH in #slimphp: "what we need is hubot so I can type #17 and get that issue url from here" | @PSchwisow | -- |
 | EventMonitor | Monitors what events are emitted, what channels they originate from, and ideally what plugins are invoked as a result, to get a sense of how the bot is being used | @elazar | -- |
 | TableFlip | Output "(╯°□°）╯︵ ɹǝsodɯoɔ" where the phrase at the end is the upside-down version of a parameterized phrase | @elazar | @elstamey |
