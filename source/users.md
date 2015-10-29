@@ -82,7 +82,7 @@ return array(
 
 Like the [`Connection`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/Connection.php) class, plugins typically accept configuration via constructors. However, the Pong plugin in particular needs no configuration, so it's simply instantiated within the plugins array.
 
-For more plugins to install, check out the [[Plugins|Plugins]] wiki page.
+For more plugins to install, check out the [Plugins](/plugins) page.
 
 ## Usage
 
