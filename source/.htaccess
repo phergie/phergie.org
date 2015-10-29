@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^phergie.org [NC]
+RewriteRule ^(.*)$ https://www.phergie.org/$1 [L,R=301,NC]
