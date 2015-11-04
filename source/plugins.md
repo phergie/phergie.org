@@ -134,6 +134,7 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 | TableFlip | Output "(╯°□°）╯︵ ɹǝsodɯoɔ" where the phrase at the end is the upside-down version of a parameterized phrase | @elazar | @elstamey |
 | UnitConvert | Uses a library like [this one](https://github.com/triplepoint/php-units-of-measure) to convert quantities between common units of measurement | @elazar | -- |
 | Spotify Integration | Listen for Spotify URLs and show a (shortened) link and song info | @PSchwisow | -- |
+| XKCD | Returns a Google "Feeling Lucky" result for a given search phrase against xkcd.com | @elazar | -- |
 
 Other ideas:
 
