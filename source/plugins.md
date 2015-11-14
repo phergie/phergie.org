@@ -35,6 +35,7 @@ use:
 * **[Puppet](https://github.com/PSchwisow/phergie-irc-plugin-react-puppet)** - allows a user to effectively speak and act as the bot
 * **[Quit](https://github.com/phergie/phergie-irc-plugin-react-quit)** - provides a command to instruct the bot to teminate a connection
 * **[Seen](https://github.com/renegade334/phergie-irc-plugin-react-seen)** - provides a command to display a user's last channel activity
+* **[TableFlip](https://github.com/elstamey/phergie-irc-plugin-react-tableflip)** - Output "(╯°□°）╯︵ ɹǝsodɯoɔ" where the phrase at the end is the upside-down version of a parameterized phrase
 * **[Tell](https://github.com/enebe-nb/phergie-irc-plugin-react-tell)** - send messages to users next time they are seen
 * **[TextFormatting](https://github.com/chrismou/php-irc-text-formatting)** - a third party library for adding color and styling to your plugin's text output
 * **[TheFuckingWeather](https://github.com/phergie/phergie-irc-plugin-react-thefuckingweather)** - provides a command to retrieve weather information from [thefuckingweather.com](http://thefuckingweather.com)
@@ -131,10 +132,13 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 | CFP | Output list of current calls for papers from joind.in API | @miss_jwo | @elstamey |
 | GitHub Issue Integration | OH in #slimphp: "what we need is hubot so I can type #17 and get that issue url from here" | @PSchwisow | @rocketpastsix |
 | EventMonitor | Monitors what events are emitted, what channels they originate from, and ideally what plugins are invoked as a result, to get a sense of how the bot is being used | @elazar | -- |
-| TableFlip | Output "(╯°□°）╯︵ ɹǝsodɯoɔ" where the phrase at the end is the upside-down version of a parameterized phrase | @elazar | @elstamey |
 | UnitConvert | Uses a library like [this one](https://github.com/triplepoint/php-units-of-measure) to convert quantities between common units of measurement | @elazar | -- |
 | Spotify Integration | Listen for Spotify URLs and show a (shortened) link and song info | @PSchwisow | -- |
-| XKCD | Returns a Google "Feeling Lucky" result for a given search phrase against xkcd.com | @elazar | -- |
+
+Other ideas:
+
+* Port plugins from [chunkybot](https://github.com/mculp/chunkybot)
+ase against xkcd.com | @elazar | -- |
 
 Other ideas:
 
