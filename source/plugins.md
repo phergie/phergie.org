@@ -134,6 +134,7 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 | EventMonitor | Monitors what events are emitted, what channels they originate from, and ideally what plugins are invoked as a result, to get a sense of how the bot is being used | @elazar | -- |
 | UnitConvert | Uses a library like [this one](https://github.com/triplepoint/php-units-of-measure) to convert quantities between common units of measurement | @elazar | -- |
 | Spotify Integration | Listen for Spotify URLs and show a (shortened) link and song info | @PSchwisow | -- |
+| What Happened | Return last ~5 lines from the previous Phergie/PHP log file to user via PM | @Svpernova09 | -- |
 
 Other ideas:
 
