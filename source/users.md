@@ -51,6 +51,32 @@ return array(
 );
 ```
 
+#### SSL Connections
+
+Connecting to an IRC server with SSL is possible. The `'serverPort'` key needs to be specified as well as an `'options'` key of `'transport' => 'ssl'` added to the `'connections'` key.
+
+```php
+use Phergie\Irc\Connection;
+return array(
+  'connections' => array(
+    new Connection(array(
+      'serverHostname' => 'irc.freenode.net',
+      'serverPort' => 6697,
+      'username' => 'Elazar',
+      'realname' => 'Matthew Turland',
+      'nickname' => 'Phergie3',
+      'options' => array(
+        'transport' => 'ssl'
+      )
+    ))
+  )
+);
+```
+
+##### Known Issues with SSL Connections
+
+There is a known issue regarding timeouts with SSL connections. If the bot appears to startup and then do nothing, double check the serverHostname and serverPort configuration values as provided by the IRC network you are trying to connect to. These values must be absolutely correct! There is a bug report for this issue at [`reactphp/socket-client #28`](https://github.com/reactphp/socket-client/issues/28)
+
 ### Plugins
 
 Plugins are PHP classes used to receive and/or send events between the bot and the servers it connects to. To use a plugin, it must be installed and the bot must be configured to use it. As with the bot itself, the recommended method of installing plugins is through composer.
