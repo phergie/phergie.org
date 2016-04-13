@@ -32,6 +32,7 @@ use:
 * **[Ping](https://github.com/Renegade334/phergie-irc-plugin-react-ping)** - closes the connection if it becomes unresponsive
 * **[PingPong](https://github.com/chrismou/phergie-irc-plugin-react-pingpong)** - test bot responsiveness
 * **[Pong](https://github.com/phergie/phergie-irc-plugin-react-pong)** - responds to server ping events
+* **[HttpStatusChecker](https://github.com/ewgRa/phergie-irc-plugin-react-http-status-checker)** -  for checking http status for url and send notification
 * **[Puppet](https://github.com/PSchwisow/phergie-irc-plugin-react-puppet)** - allows a user to effectively speak and act as the bot
 * **[Quit](https://github.com/phergie/phergie-irc-plugin-react-quit)** - provides a command to instruct the bot to teminate a connection
 * **[Seen](https://github.com/renegade334/phergie-irc-plugin-react-seen)** - provides a command to display a user's last channel activity
