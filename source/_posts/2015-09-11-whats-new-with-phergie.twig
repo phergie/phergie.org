@@ -1,0 +1,77 @@
+---
+title: "What's new with Phergie"
+date: '2015-09-11 12:47:10'
+tags:
+    - news
+categories:
+    - news
+---
+<article>
+    <header>
+        <h2>{{ page.title }}</h2>
+    </header>
+    <div>
+        {% if page.authors %}
+            <h5>Author:
+                {% for thisAuthor in page.authors %}
+                    {{ thisAuthor }}
+                {% endfor %}
+            </h5>
+        {% endif %}
+        {% if page.date %}
+            Published: {{ page.date|date("m/d/Y") }}<BR>
+        {% endif %}
+        
+        <p>"We're all fine here"</p>
+        
+        <p>
+        It has been a while since there has been an update here. If you haven't checked in with us in a while there is some news we would like to share.
+        </p>
+        <p>
+        Late August of 2015 Matthew Turland, the original author and project lead, reached out to test the waters on the idea of passing the leadership torch of the Phergie project. 
+        Matthew Trask And Joe Ferguson took co-leadership of the project shortly after while Matthew Turland has stayed on in an advisory role.
+        </p>
+        <p>
+        What does this mean? nothing. We plan on continuing reviewing pull requests, bug reports, and working on making Phergie awesome.
+        If you have any questions please feel free to drop by #phergie on the Freenode channel.
+        </p>
+        <p>
+        One thing all three of us would like to see is to make Phergie more inviting to contributors. 
+        We all heavily support <a href="http://phpmentoring.org" target="_blank">PHPMentoring.org</a> and would like Phergie to be
+        an easy project for new contributors and even first time open source contributors to join and learn.
+        </p>
+        <p>
+        We have moved our wiki documentation to this website to encourage pull request to help make the documentation better.
+        We have also moved from our WordPress site to using Sculpin to make it easier for possible contributors to help build this site.
+        </p>
+    </div>
+    {% if page.categories %}
+    <p class="categories">
+        Categories:
+        {% for category in page.categories %}
+        <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+    {% if page.tags %}
+    <p class="tags">
+        Tags:
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+
+    {#{% if page.previous_post or page.next_post %}#}
+    {#<nav class="article">#}
+        {#<ul>#}
+            {#{% if page.next_post %}#}
+            {#<li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+            {#{% if page.previous_post %}#}
+            {#<li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+        {#</ul>#}
+    {#</nav>#}
+    {#{% endif %}#}
+</article>

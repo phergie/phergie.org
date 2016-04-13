@@ -1,0 +1,108 @@
+---
+title: 'Packages release for November 2014'
+date: '2014-12-13 17:01:46'
+layout: post
+slug: packages-release-for-november-2014
+categories:
+    - Releases
+tags: {  }
+---
+<article>
+	<header>
+		<h2>{{ page.title }}</h2>
+	</header>
+	<div>
+		{% if page.authors %}
+			<h5>Author:
+				{% for thisAuthor in page.authors %}
+					{{ thisAuthor }}
+				{% endfor %}
+			</h5>
+		{% endif %}
+		{% if page.date %}
+			Published: {{ page.date|date("m/d/Y") }}<BR>
+		{% endif %}
+
+		We now have a bot implementation for Phergie v3 and a number of the more commonly used plugins ported over from Phergie v2! Please try these out and file any issues or feature requests against the appropriate repo on Github. Thanks in advance for your contributions!
+		<h3>Acknowledgements</h3>
+		We love our contributors and those of the projects on which we build! Many thanks to those without whom these releases would not have been possible.
+		<ul>
+			<li><a title="WyriHaximus (Cees-Jan Kiewiet)" href="https://github.com/WyriHaximus">Cees-Jan Kiewiet</a> has contributed the <a title="WyriHaximus/PhergieDns" href="https://github.com/WyriHaximus/PhergieDns">Dns,</a> <a title="WyriHaximus/PhergieHttp" href="https://github.com/WyriHaximus/PhergieHttp">Http</a>, and <a title="WyriHaximus/PhergieUrl" href="https://github.com/WyriHaximus/PhergieUrl">Url</a> plugins and the <a title="WyriHaximus/ReactGuzzle" href="https://github.com/WyriHaximus/ReactGuzzle">React-based adapter</a> for <a title="Guzzle | PHP HTTP client and framework for consuming RESTful web services &amp;mdash; Guzzle documentation" href="http://guzzle.readthedocs.org/en/latest/">Guzzle</a> that will be used by the <a title="phergie/phergie-irc-plugin-react-twitter" href="https://github.com/phergie/phergie-irc-plugin-react-twitter">Twitter</a> plugin. He has also provided feedback about our use of <a title="React" href="http://reactphp.org/">React</a> and related libraries in core and new plugins.</li>
+			<li><a title="cboden (Chris Boden)" href="http://github.com/cboden">Chris Boden</a> has been very helpful in assisting when we've requested help and reported issues with <a title="React" href="http://reactphp.org/">React</a> and related libraries.</li>
+			<li>The recommended method of installing the new bot and its plugins exists due to the work of individuals like <a title="Jordi Boggiano (seldaek) on Twitter" href="https://twitter.com/seldaek">Jordi Boggiano</a> on the <a title="Composer" href="http://getcomposer.org">Composer</a> and <a title="Packagist" href="http://packagist.org">Packagist</a> projects.</li>
+			<li>The <a title="PHPUnit" href="http://phpunit.de">PHPUnit</a> testing framework is maintained by <a title="Sebastian Bergmann" href="http://sebastian-bergmann.de">Sebastian Bergmann</a>.</li>
+			<li>The <a title="mlively/Phake" href="https://github.com/mlively/Phake">Phake</a> library is maintained by <a title="mlively (Mike Lively)" href="https://github.com/mlively/">Mike Lively</a>.</li>
+			<li>The <a title="Travis CI - Free Hosted Continuous Integration Platform for the Open Source Community" href="https://travis-ci.org">Travis CI</a> service enables us to automatically run our tests across multiple PHP versions and be informed if a commit causes a test failure.</li>
+		</ul>
+		<h3>Highlights</h3>
+		<ul>
+			<li>All <a title="Travis CI - Free Hosted Continuous Integration Platform for the Open Source Community" href="https://travis-ci.org">Travis CI</a> configurations now include PHP 5.3.3 where supported; the latest versions of the PHP 5.3 (where supported), 5.4, 5.5, and 5.6 branches; and <a title="HHVM" href="http://hhvm.com/">HHVM</a> 3.4.0. Tests for all repos have 100% code coverage and pass under all PHP / HHVM versions included in testing.</li>
+			<li>All repos are now using <a title="Release Your Software" href="https://github.com/blog/1547-release-your-software">GitHub Releases</a>. Changelogs will be included there instead of in posts on this site.</li>
+			<li>All repos support <a title="Composer" href="http://getcomposer.org">Composer</a> and are available on <a title="Packagist" href="http://packagist.org">Packagist</a>.</li>
+			<li>Where some repos previously had two separate <code>composer.json</code> files, all now have one and use <code>require-dev</code> and <code>autoload-dev</code> as appropriate.</li>
+			<li>All repos now use <a title="Composer" href="https://getcomposer.org/doc/04-schema.md#psr-4">PSR-4 autoloading</a>. The <code>src</code> and <code>tests</code> directories of all repos have had unneeded namespace directories removed.</li>
+			<li>All test suites now use <a title="PHPUnit" href="http://phpunit.de">PHPUnit</a> 4.1.x for running tests and <a title="mlively/Phake" href="https://github.com/mlively/Phake">Phake</a> 2.0.0-beta2 for mocking.</li>
+			<li><a title="API Documentation" href="http://phergie.github.io/api/namespaces/Phergie.Irc.html">API documentation</a> is now available.</li>
+		</ul>
+		<h3>Roadmap</h3>
+		<ul>
+			<li>We admittedly failed at making the release cycle more regular this time around. We'll try to do a better job of that moving forward.</li>
+			<li>This and future releases will target PHP 5.4. <a title="PHP: News Archive - 2014" href="http://php.net/archive/2014.php#id2014-08-14-1">PHP 5.3 has reached end-of-life</a> and related version conflicts with React dependencies are becoming more frequent.</li>
+			<li><a title="phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react">phergie/phergie-irc-bot-react</a> will undergo bug fixes and minor feature additions as we move to further stabilize it.</li>
+			<li>Plugin ports and additions will continue to further expand the ecosystem and put the bot implementation through its paces.</li>
+			<li>We'll be exploring the possibility of setting up a <a title="Composer" href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md">Satis</a> repository for Phergie plugins to replace the current solution of a <a title="Plugins - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Plugins">Github wiki page</a>.</li>
+		</ul>
+		<h3>How You Can Help</h3>
+		If you run into any issues, you can <a title="Issues - phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react/issues?state=open">file an issue on Github</a>, find us in the <a title="#phergie" href="irc://irc.freenode.net/phergie">#phergie channel</a> on the <a title="About the Network" href="http://freenode.net">Freenode IRC network</a>, or e-mail us at <a title="t&amp;#101;a&amp;#109;&amp;#64;&amp;#112;h&amp;#101;rgie&amp;#46;o&amp;#114;g" href="ma&amp;#105;lto&amp;#58;t&amp;#101;%61m%40ph&amp;#101;%&amp;#55;2gi&amp;#101;&amp;#46;o&amp;#114;%6&amp;#55;">team@phergie.org</a>.
+		<ul>
+			<li>Try <a title="phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react">the bot</a> out.</li>
+			<li><a title="Issues - phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react/issues?state=open">File an issue</a> if you run into any problems or have a new core feature to suggest.</li>
+			<li><a title="Plugins - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Plugins#ideas-for-new-plugins">Suggest a new plugin</a>.</li>
+			<li>Update <a title="Usage - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Usage">the documentation</a> if you find it has any incorrect or missing information.</li>
+			<li>Find a <a title="Plugins - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Plugins#plugins-to-port">Phergie v2 plugin to port</a> or <a title="Development - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Development#developing-plugins">write a completely new plugin</a> of your own. Our handy <a title="phergie/phergie-irc-plugin-react-scaffold" href="https://github.com/phergie/phergie-irc-plugin-react-scaffold">scaffold tool</a> might be useful for generating initial boilerplate code. Once you've got your plugin stable, be sure to update our <a title="Plugins - phergie/phergie-irc-bot-react Wiki" href="https://github.com/phergie/phergie-irc-bot-react/wiki/Plugins">plugins wiki page</a> to include it.</li>
+		</ul>
+		<h3>Releases</h3>
+		<h4>phergie-irc-bot-react 1.0.0</h4>
+		<a title="phergie/phergie-irc-bot-react" href="https://github.com/phergie/phergie-irc-bot-react">Github</a>, <a title="phergie/phergie-irc-bot-react - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-bot-react">Packagist</a>
+		<h4>phergie-irc-client-react 2.0.0</h4>
+		<a title="phergie/phergie-irc-client-react" href="https://github.com/phergie/phergie-irc-client-react">Github</a>, <a title="phergie/phergie-irc-client-react - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-client-react">Packagist</a>
+		<h4>phergie-irc-parser 1.5.0</h4>
+		<a title="phergie/phergie-irc-parser" href="https://github.com/phergie/phergie-irc-parser">Github</a>, <a title="phergie/phergie-irc-parser - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-parser">Packagist</a>
+		<h4>phergie-irc-generator 1.4.0</h4>
+		<a title="phergie/phergie-irc-generator" href="https://github.com/phergie/phergie-irc-generator">Github</a>, <a title="phergie/phergie-irc-generator - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-generator">Packagist</a>
+		<h4>phergie-irc-connection 1.2.0</h4>
+		<a title="phergie/phergie-irc-connection" href="https://github.com/phergie/phergie-irc-connection">Github</a>, <a title="phergie/phergie-irc-connection - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-connection">Packagist</a>
+		<h4>phergie-irc-event 1.0.0</h4>
+		<a title="phergie/phergie-irc-event" href="https://github.com/phergie/phergie-irc-event">Github</a>, <a title="phergie/phergie-irc-event - Packagist" href="https://packagist.org/packages/phergie/phergie-irc-event">Packagist</a>
+
+	</div>
+	{% if page.categories %}
+		<p class="categories">
+			Categories:
+			{% for category in page.categories %}
+				<a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		</p>
+	{% endif %}
+	{% if page.tags %}
+		<p class="tags">
+			Tags:
+			{% for tag in page.tags %}
+				<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		</p>
+	{% endif %}
+
+	{#{% if page.previous_post or page.next_post %}#}
+	{#<nav class="article">#}
+	{#<ul>#}
+	{#{% if page.next_post %}#}
+	{#<li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>#}
+	{#{% endif %}#}
+	{#{% if page.previous_post %}#}
+	{#<li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>#}
+	{#{% endif %}#}
+	{#</ul>#}
+	{#</nav>#}
+	{#{% endif %}#}
+</article>

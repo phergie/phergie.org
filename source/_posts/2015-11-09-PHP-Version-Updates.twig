@@ -1,0 +1,69 @@
+---
+title: "PHP Version Updates and Development"
+date: '2015-11-09 12:47:10'
+tags:
+    - news
+categories:
+    - news
+authors: 
+    - Joe
+---
+<article>
+    <header>
+        <h2>{{ page.title }}</h2>
+    </header>
+    <div>
+        <h5>Author:
+            {% for thisAuthor in page.authors %}
+                {{ thisAuthor }}
+            {% endfor %}
+        </h5>
+        {% if page.date %}
+            Published: {{ page.date|date("m/d/Y") }}<BR>
+        {% endif %}
+        
+        Hello everyone! Some updates from the Phergie team:
+
+        <h3>Minimum PHP Versions</h3>
+
+        We are in the process of removing all support for any PHP version older than 5.5. We will no longer be testing any older versions. We hope this helps push users forward to newer versions of PHP.
+
+        With the imminent release of PHP 7 we have removed the allowed failures for 7 on Travis.
+
+
+        <h3>Development Package!</h3>
+
+        We have created a development package [phergie/phergie-irc-bot-react-development](https://github.com/phergie/phergie-irc-bot-react-development) to hold all of our commonly used development dependencies and have begun updating packages to use this.
+
+        Instead of requiring multiple dependencies for development you can require this one package instead.
+    </div>
+    {% if page.categories %}
+    <p class="categories">
+        Categories:
+        {% for category in page.categories %}
+        <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+    {% if page.tags %}
+    <p class="tags">
+        Tags:
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+
+    {#{% if page.previous_post or page.next_post %}#}
+    {#<nav class="article">#}
+        {#<ul>#}
+            {#{% if page.next_post %}#}
+            {#<li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+            {#{% if page.previous_post %}#}
+            {#<li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+        {#</ul>#}
+    {#</nav>#}
+    {#{% endif %}#}
+</article>
