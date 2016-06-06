@@ -90,7 +90,7 @@ Status Key:
 | [Ideone](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Ideone.php) | Blocked | Needs async SOAP client, e.g. [clue/php-soap-react](https://github.com/clue/php-soap-react) |
 | [Invisible](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Invisible.php) | **Open** | Low-hanging fruit |
 | [Join](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Join.php) | Done | [phergie/phergie-irc-plugin-react-joinpart](https://github.com/phergie/phergie-irc-plugin-react-joinpart) |
-| [Karma](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Karma.php) | **Open** | |
+| [Karma](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Karma.php) | In Progress | [pschwisow/phergie-irc-plugin-react-karma](https://github.com/PSchwisow/phergie-irc-plugin-react-karma) |
 | [Lart](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Lart.php) | **Open** | |
 | [Logging](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Logging.php) | Deprecated | Now [supported in core](https://github.com/phergie/phergie-irc-bot-react/wiki/Development#logging) |
 | [Message](https://github.com/phergie/phergie/blob/master/Phergie/Plugin/Message.php) | Deprecated | [phergie/phergie-irc-plugin-react-command](https://github.com/phergie/phergie-irc-plugin-react-command/) |
