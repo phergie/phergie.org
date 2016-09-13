@@ -28,7 +28,6 @@ use:
 * **[JoinPart](https://github.com/phergie/phergie-irc-plugin-react-joinpart)** - provides commands to instruct the bot to join and part channels
 * **[MagicEightBall](https://github.com/dstockto/phergie-irc-plugin-react-magic-eightball)** - helps users make tough decisions
 * **[NickServ](https://github.com/phergie/phergie-irc-plugin-react-nickserv)** - authenticates the bot with the NickServ agent
-* **[OpsWorksDeployment](https://github.com/blopboard/phergie-irc-plugin-opsworksdeployment)** - provides deployment commands for [Amazon OpsWorks](http://aws.amazon.com/opsworks/)
 * **[PHP](https://github.com/chrismou/phergie-irc-plugin-react-php)** - performs PHP function lookups
 * **[Ping](https://github.com/Renegade334/phergie-irc-plugin-react-ping)** - closes the connection if it becomes unresponsive
 * **[PingPong](https://github.com/chrismou/phergie-irc-plugin-react-pingpong)** - test bot responsiveness
