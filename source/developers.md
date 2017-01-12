@@ -36,7 +36,7 @@ Alternatively, create a directory containing a `composer.json` file with the con
 
 ```json
 require: {
-    phergie/phergie-irc-bot-react
+    'phergie/phergie-irc-bot-react': '^2.0'
 }
 ```
 
