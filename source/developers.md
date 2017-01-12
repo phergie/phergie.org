@@ -34,12 +34,8 @@ The `phergie-scaffold` tool was created to automate the creation of files common
 
 Alternatively, create a directory containing a `composer.json` file with the contents shown below, then run `composer install`. This will install the bot and all its dependencies. See [Composer documentation](https://getcomposer.org/doc/00-intro.md) for further information.
 
-```json
-{
-  "require": {
-    "phergie/phergie-irc-bot-react": "~1"
-  }
-}
+```shell
+composer require phergie/phergie-irc-bot-react ^2.0
 ```
 
 As you're reviewing this page, the [API documentation](http://phergie.github.io/api/namespaces/Phergie.Irc.html) may come in handy.
