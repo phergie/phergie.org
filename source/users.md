@@ -9,14 +9,10 @@ use:
 ---
 ## Installation
 
-The recommended method of installation is [through composer](http://getcomposer.org). On your local filesystem, create a new directory. Within that directory, create a `composer.json` file containing the following:
+The recommended method of installation is [through composer](http://getcomposer.org). On your local filesystem, create a new directory. Within that directory, create a `composer.json` file by executing the following command:
 
-```JSON
-{
-    "require": {
-        "phergie/phergie-irc-bot-react": "~1"
-    }
-}
+```bash
+composer require "phergie/phergie-irc-bot-react"
 ```
 
 From this created directory, [install composer](https://getcomposer.org/download/) and run `php composer.phar install`. This will install Phergie and all needed core dependencies.
@@ -83,16 +79,10 @@ Plugins are PHP classes used to receive and/or send events between the bot and t
 
 One commonly used plugin is the [Pong plugin](https://github.com/phergie/phergie-irc-plugin-react-pong), which responds to server ping events used to ensure user connections are active. Let's walk through adding a plugin to a Phergie installation using the Pong plugin as an example.
 
-To install the plugin, open the `composer.json` file created to install the bot and add a line to the `"require"` section so that the file looks like the example below, then run 
-`php composer.phar update` from the created directory.
+To install the plugin, execute the following command:
 
-```JSON
-{
-    "require": {
-        "phergie/phergie-irc-bot-react": "~1",
-        "phergie/phergie-irc-plugin-react-pong": "~1"
-    }
-}
+```bash
+composer require "phergie/phergie-irc-plugin-react-pong"
 ```
 
 Now that the plugin is installed, it needs to be added to the Phergie configuration file. Within the array returned by that file, in addition to the `'connections'` key added in the last section, there can also be a `'plugins'` key that references an array of one or more plugin instances.
