@@ -136,11 +136,7 @@ Want a plugin that's not listed above? Suggest it by adding a row to the table b
 | UnitConvert | Uses a library like [this one](https://github.com/triplepoint/php-units-of-measure) to convert quantities between common units of measurement | @elazar | -- |
 | Spotify Integration | Listen for Spotify URLs and show a (shortened) link and song info | @PSchwisow | -- |
 | What Happened | Return last ~5 lines from the previous Phergie/PHP log file to user via PM | @Svpernova09 | -- |
-
-Other ideas:
-
-* Port plugins from [chunkybot](https://github.com/mculp/chunkybot)
-ase against xkcd.com | @elazar | -- |
+| Xkcd | Return first xkcd.com strip URL based on text search | @elazar | -- |
 
 Other ideas:
 
