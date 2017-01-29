@@ -46,7 +46,7 @@ use:
 * **[Wikidata](https://github.com/addshore/phergie-irc-plugin-react-wikidata)** - performs lookups on Wikidata
 * **[YouTube](https://github.com/phergie/phergie-irc-plugin-react-youtube)** - responds to [YouTube](https://www.youtube.com) URLs with video information
 
-Edit this page to add yours! :)
+[Edit this page](https://github.com/phergie/phergie.org/edit/master/source/plugins.md) to add yours! :)
 
 ## Plugins to Port
 
