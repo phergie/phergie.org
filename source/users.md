@@ -77,12 +77,12 @@ There is a known issue regarding timeouts with SSL connections. If the bot appea
 
 Plugins are PHP classes used to receive and/or send events between the bot and the servers it connects to. To use a plugin, it must be installed and the bot must be configured to use it. As with the bot itself, the recommended method of installing plugins is through composer.
 
-One commonly used plugin is the [Pong plugin](https://github.com/phergie/phergie-irc-plugin-react-pong), which responds to server ping events used to ensure user connections are active. Let's walk through adding a plugin to a Phergie installation using the Pong plugin as an example.
+One commonly used plugin is the [AutoJoin plugin](https://github.com/phergie/phergie-irc-plugin-react-autojoin), which joins the channels you specify on connection to a server. Let's walk through adding a plugin to a Phergie installation using the AutoJoin plugin as an example.
 
 To install the plugin, execute the following command:
 
 ```bash
-composer require "phergie/phergie-irc-plugin-react-pong"
+composer require "phergie/phergie-irc-plugin-react-autojoin"
 ```
 
 Now that the plugin is installed, it needs to be added to the Phergie configuration file. Within the array returned by that file, in addition to the `'connections'` key added in the last section, there can also be a `'plugins'` key that references an array of one or more plugin instances.
@@ -91,12 +91,12 @@ Now that the plugin is installed, it needs to be added to the Phergie configurat
 return array(
   // ...
   'plugins' => array(
-    new \Phergie\Irc\Plugin\React\Pong\Plugin
+    new \Phergie\Irc\Plugin\React\AutoJoin\Plugin(['channels' => '#phergie'])
   )
 );
 ```
 
-Like the [`Connection`](https://github.com/phergie/phergie-irc-bot-react/blob/master/src/Connection.php) class, plugins typically accept configuration via constructors. However, the Pong plugin in particular needs no configuration, so it's simply instantiated within the plugins array.
+This configuration will have the bot join the #phergie channel once it connects to a server.
 
 For more plugins to install, check out the [Plugins](/plugins) page.
 
