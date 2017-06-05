@@ -23,7 +23,7 @@ use:
 * **[EventFilter](https://github.com/phergie/phergie-irc-plugin-react-eventfilter)** - limits processing of incoming events by other plugins based on event metadata
 * **[FeedTicker](https://github.com/phergie/phergie-irc-plugin-react-feedticker)** - syndicates data from feed items to channels or users
 * **[Google](https://github.com/chrismou/phergie-irc-plugin-react-google)** - perform Google searches for the top result or estimated result count
-* **[Http](https://github.com/WyriHaximus/PhergieHttp/)** - provides a basic asynchronous HTTP client for use by other plugins
+* **[Http](https://github.com/phergie/plugin-http)** - provides a basic asynchronous HTTP client for use by other plugins
 * **[HttpStatusChecker](https://github.com/ewgRa/phergie-irc-plugin-react-http-status-checker)** -  for checking http status for url and send notification
 * **[JoinPart](https://github.com/phergie/phergie-irc-plugin-react-joinpart)** - provides commands to instruct the bot to join and part channels
 * **[MagicEightBall](https://github.com/dstockto/phergie-irc-plugin-react-magic-eightball)** - helps users make tough decisions
