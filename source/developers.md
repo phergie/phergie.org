@@ -111,7 +111,7 @@ Note that the bot handles sending [connection registration events](http://tools.
 
 IRC event handler methods typically accept two parameters:
 
-* `$event`, an object that contains data about the event and implements [`EventInterface`](Even://github.com/phergie/phergie-irc-event/blob/master/src/EventInterface.php)
+* `$event`, an object that contains data about the event and implements [`EventInterface`](https://github.com/phergie/phergie-irc-event/blob/master/src/EventInterface.php)
 or subinterfaces of it such as
 [`UserEventInterface`](https://github.com/phergie/phergie-irc-event/blob/master/src/UserEventInterface.php),
 [`ServerEventInterface`](https://github.com/phergie/phergie-irc-event/blob/master/src/ServerEventInterface.php),
