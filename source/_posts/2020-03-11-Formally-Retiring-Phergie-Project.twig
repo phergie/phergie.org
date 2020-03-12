@@ -1,0 +1,70 @@
+---
+title: "Formally retiring the Phergie project"
+date: '2020-03-11 12:47:10'
+tags:
+    - news
+categories:
+    - news
+authors: 
+    - Joe
+---
+<article>
+    <header>
+        <h1 class="entry-title">
+            <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+        </h1>
+    </header>
+    <div>
+        <h5>Author:
+            {% for thisAuthor in page.authors %}
+                {{ thisAuthor }}
+            {% endfor %}
+        </h5>
+        {% if page.date %}
+            Published: {{ page.date|date("m/d/Y") }}<BR>
+        {% endif %}
+        
+        Hello everyone! Some updates from the Phergie team:
+
+        <h3>The Phergie project has been marked as abandoned on Github & Packagist</h3>
+
+        <p>
+            This has been a long time coming, but today we have formalized the intentiont o abandon the Phergie project.
+            Thanks to all the contributors, maintainers, commenters, bug reporters, and everyone else who contributed to the
+            incredible user base of Phergie.
+        </p>
+        <p>
+            If you're interested the repositories can be forked under a new Composer namespace/GitHub organization.
+        </p>
+
+    </div>
+    {% if page.categories %}
+    <p class="categories">
+        Categories:
+        {% for category in page.categories %}
+        <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+    {% if page.tags %}
+    <p class="tags">
+        Tags:
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% endif %}
+
+    {#{% if page.previous_post or page.next_post %}#}
+    {#<nav class="article">#}
+        {#<ul>#}
+            {#{% if page.next_post %}#}
+            {#<li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+            {#{% if page.previous_post %}#}
+            {#<li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>#}
+            {#{% endif %}#}
+        {#</ul>#}
+    {#</nav>#}
+    {#{% endif %}#}
+</article>

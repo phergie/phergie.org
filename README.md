@@ -1,3 +1,8 @@
+# This project is abandoned
+
+This repo is being kept for posterity and will be archived in a readonly state. 
+If you're interested it can be forked under a new Composer namespace/GitHub organization.
+
 # Phergie.org
 
 [http://www.Phergie.org](http://www.Phergie.org)
